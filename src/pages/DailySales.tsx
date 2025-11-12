@@ -96,13 +96,52 @@ const DailySales = () => {
     },
   });
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Form submitted:", {
-      ...data,
-      date: format(data.date, "PPP"),
-    });
-    toast.success("Daily sales record submitted successfully!");
-    form.reset();
+  const onSubmit = async (data: FormValues) => {
+    try {
+      // Prepare the payload for the webhook
+      const payload = {
+        date: format(data.date, "yyyy-MM-dd"),
+        dateFormatted: format(data.date, "PPP"),
+        cashSale: Number(data.cashSale),
+        bankSale: Number(data.bankSale),
+        teaCounterSale: Number(data.teaCounterSale),
+        creditSale: Number(data.creditSale),
+        canteenCashSale: Number(data.canteenCashSale),
+        canteenBankSale: Number(data.canteenBankSale),
+        totalExpense: Number(data.totalExpense),
+        depositToBox: Number(data.depositToBox),
+        canteenDepositToBox: Number(data.canteenDepositToBox),
+        closingBalance: Number(data.closingBalance),
+        cashOutDepositBox: Number(data.cashOutDepositBox),
+        careemSales: Number(data.careemSales),
+        noonSales: Number(data.noonSales),
+        talabatSales: Number(data.talabatSales),
+        submittedAt: new Date().toISOString(),
+      };
+
+      console.log("Submitting to webhook:", payload);
+
+      // Send to n8n webhook
+      const response = await fetch("https://searchdavidf.app.n8n.cloud/form/4c907474-7d0c-41a5-9987-e9eba8afacd2", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Webhook returned status ${response.status}`);
+      }
+
+      console.log("Webhook response:", await response.text());
+      
+      toast.success("Daily sales record submitted successfully!");
+      form.reset();
+    } catch (error) {
+      console.error("Error submitting to webhook:", error);
+      toast.error("Failed to submit sales record. Please try again.");
+    }
   };
 
   return (
