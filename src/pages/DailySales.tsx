@@ -24,12 +24,9 @@ const formSchema = z.object({
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
-  bankSale: z
-    .string()
-    .min(0, "Bank Sale is required")
-    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-      message: "Must be a valid positive number",
-    }),
+  bankSale: z.string().refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+    message: "Must be a valid positive number",
+  }),
   teaCounterSale: z
     .string()
     .min(0, "Tea Counter Sale is required")
