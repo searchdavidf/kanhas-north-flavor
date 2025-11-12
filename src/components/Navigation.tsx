@@ -42,6 +42,14 @@ const Navigation = () => {
             >
               Menu
             </Link>
+            <Link 
+              to="/daily-sales" 
+              className={`font-medium transition-colors hover:text-primary ${
+                isActive('/daily-sales') ? 'text-primary' : 'text-foreground'
+              }`}
+            >
+              Daily Sales
+            </Link>
             <a 
               href="tel:023094707" 
               className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -61,7 +69,7 @@ const Navigation = () => {
           </div>
         </div>
         
-        <div className="md:hidden flex items-center justify-center space-x-4 mt-3 pt-3 border-t border-border">
+        <div className="md:hidden flex items-center justify-center space-x-3 mt-3 pt-3 border-t border-border">
           <Link 
             to="/" 
             className={`text-sm font-medium transition-colors hover:text-primary ${
@@ -85,6 +93,14 @@ const Navigation = () => {
             }`}
           >
             Menu
+          </Link>
+          <Link 
+            to="/daily-sales" 
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              isActive('/daily-sales') ? 'text-primary' : 'text-foreground'
+            }`}
+          >
+            Sales
           </Link>
         </div>
       </div>
