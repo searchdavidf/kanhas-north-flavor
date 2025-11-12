@@ -20,37 +20,37 @@ const formSchema = z.object({
   }),
   cashSale: z
     .string()
-    .min(1, "Cash Sale is required")
+    .min(0, "Cash Sale is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   bankSale: z
     .string()
-    .min(1, "Bank Sale is required")
+    .min(0, "Bank Sale is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   teaCounterSale: z
     .string()
-    .min(1, "Tea Counter Sale is required")
+    .min(0, "Tea Counter Sale is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   creditSale: z
     .string()
-    .min(1, "Credit Sale is required")
+    .min(0, "Credit Sale is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   canteenCashSale: z
     .string()
-    .min(1, "Canteen Cash Sale is required")
+    .min(0, "Canteen Cash Sale is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   canteenBankSale: z
     .string()
-    .min(1, "Canteen Bank Sale is required")
+    .min(0, "Canteen Bank Sale is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
@@ -62,43 +62,43 @@ const formSchema = z.object({
     }),
   depositToBox: z
     .string()
-    .min(1, "Deposit to Box is required")
+    .min(0, "Deposit to Box is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   canteenDepositToBox: z
     .string()
-    .min(1, "Canteen Deposit to Box is required")
+    .min(0, "Canteen Deposit to Box is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   closingBalance: z
     .string()
-    .min(1, "Closing Balance is required")
+    .min(0, "Closing Balance is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   cashOutDepositBox: z
     .string()
-    .min(1, "Cash out Deposit box is required")
+    .min(0, "Cash out Deposit box is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   careemSales: z
     .string()
-    .min(1, "Careem Sales is required")
+    .min(0, "Careem Sales is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   noonSales: z
     .string()
-    .min(1, "Noon Sales is required")
+    .min(0, "Noon Sales is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
   talabatSales: z
     .string()
-    .min(1, "Talabat Sales is required")
+    .min(0, "Talabat Sales is required")
     .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
       message: "Must be a valid positive number",
     }),
