@@ -7,20 +7,9 @@ import { CalendarIcon } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import { cn } from "@/lib/utils";
@@ -29,48 +18,90 @@ const formSchema = z.object({
   date: z.date({
     required_error: "Date is required",
   }),
-  cashSale: z.string().min(1, "Cash Sale is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  bankSale: z.string().min(1, "Bank Sale is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  teaCounterSale: z.string().min(1, "Tea Counter Sale is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  creditSale: z.string().min(1, "Credit Sale is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  canteenCashSale: z.string().min(1, "Canteen Cash Sale is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  canteenBankSale: z.string().min(1, "Canteen Bank Sale is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  totalExpense: z.string().min(1, "Total Expense is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  depositToBox: z.string().min(1, "Deposit to Box is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  canteenDepositToBox: z.string().min(1, "Canteen Deposit to Box is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  closingBalance: z.string().min(1, "Closing Balance is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  cashOutDepositBox: z.string().min(1, "Cash out Deposit box is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  careemSales: z.string().min(1, "Careem Sales is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  noonSales: z.string().min(1, "Noon Sales is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
-  talabatSales: z.string().min(1, "Talabat Sales is required").refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
+  cashSale: z
+    .string()
+    .min(1, "Cash Sale is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  bankSale: z
+    .string()
+    .min(1, "Bank Sale is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  teaCounterSale: z
+    .string()
+    .min(1, "Tea Counter Sale is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  creditSale: z
+    .string()
+    .min(1, "Credit Sale is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  canteenCashSale: z
+    .string()
+    .min(1, "Canteen Cash Sale is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  canteenBankSale: z
+    .string()
+    .min(1, "Canteen Bank Sale is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  totalExpense: z
+    .string()
+    .min(1, "Total Expense is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  depositToBox: z
+    .string()
+    .min(1, "Deposit to Box is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  canteenDepositToBox: z
+    .string()
+    .min(1, "Canteen Deposit to Box is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  closingBalance: z
+    .string()
+    .min(1, "Closing Balance is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  cashOutDepositBox: z
+    .string()
+    .min(1, "Cash out Deposit box is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  careemSales: z
+    .string()
+    .min(1, "Careem Sales is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  noonSales: z
+    .string()
+    .min(1, "Noon Sales is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
+  talabatSales: z
+    .string()
+    .min(1, "Talabat Sales is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
+      message: "Must be a valid positive number",
+    }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -122,20 +153,23 @@ const DailySales = () => {
       console.log("Submitting to webhook:", payload);
 
       // Send to n8n webhook
-      const response = await fetch("https://searchdavidf.app.n8n.cloud/form/4c907474-7d0c-41a5-9987-e9eba8afacd2", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://searchdavidf.app.n8n.cloud/webhook-test/cad397b4-ece6-41fa-b107-e50f4afaf125",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
-      });
+      );
 
       if (!response.ok) {
         throw new Error(`Webhook returned status ${response.status}`);
       }
 
       console.log("Webhook response:", await response.text());
-      
+
       toast.success("Daily sales record submitted successfully!");
       form.reset();
     } catch (error) {
@@ -152,9 +186,7 @@ const DailySales = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-3 text-foreground">Daily Sales Entry</h1>
-            <p className="text-lg text-muted-foreground">
-              Record daily sales and financial transactions
-            </p>
+            <p className="text-lg text-muted-foreground">Record daily sales and financial transactions</p>
           </div>
 
           <Card className="border-border">
@@ -178,14 +210,10 @@ const DailySales = () => {
                                 variant="outline"
                                 className={cn(
                                   "w-full pl-3 text-left font-normal",
-                                  !field.value && "text-muted-foreground"
+                                  !field.value && "text-muted-foreground",
                                 )}
                               >
-                                {field.value ? (
-                                  format(field.value, "PPP")
-                                ) : (
-                                  <span>Pick a date</span>
-                                )}
+                                {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
                                 <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                               </Button>
                             </FormControl>
@@ -195,9 +223,7 @@ const DailySales = () => {
                               mode="single"
                               selected={field.value}
                               onSelect={field.onChange}
-                              disabled={(date) =>
-                                date > new Date() || date < new Date("2020-01-01")
-                              }
+                              disabled={(date) => date > new Date() || date < new Date("2020-01-01")}
                               initialFocus
                               className={cn("p-3 pointer-events-auto")}
                             />
@@ -520,9 +546,7 @@ const DailySales = () => {
         <div className="container mx-auto text-center">
           <h3 className="text-2xl font-bold mb-2">Kanhas Veg Restaurant</h3>
           <p className="text-background/70 mb-4">Authentic North Indian Vegetarian Cuisine</p>
-          <p className="text-sm text-background/60">
-            © 2025 Kanhas Veg Restaurant. All rights reserved.
-          </p>
+          <p className="text-sm text-background/60">© 2025 Kanhas Veg Restaurant. All rights reserved.</p>
         </div>
       </footer>
     </div>
