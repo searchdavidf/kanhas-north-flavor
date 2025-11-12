@@ -14,7 +14,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const authSchema = z.object({
-  email: z.string().email("Invalid email address").max(255, "Email too long"),
+  email: z.string().trim().toLowerCase().email("Invalid email address").max(255, "Email too long"),
   password: z.string().min(6, "Password must be at least 6 characters").max(100, "Password too long"),
 });
 
