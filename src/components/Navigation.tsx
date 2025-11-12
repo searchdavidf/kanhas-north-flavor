@@ -1,11 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, LogOut, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Navigation = () => {
   const location = useLocation();
+  const { user, isAdmin, signOut } = useAuth();
   
   const isActive = (path: string) => location.pathname === path;
+  
+  const handleSignOut = async () => {
+    await signOut();
+  };
   
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
@@ -42,14 +48,16 @@ const Navigation = () => {
             >
               Menu
             </Link>
-            <Link 
-              to="/daily-sales" 
-              className={`font-medium transition-colors hover:text-primary ${
-                isActive('/daily-sales') ? 'text-primary' : 'text-foreground'
-              }`}
-            >
-              Daily Sales
-            </Link>
+            {isAdmin && (
+              <Link 
+                to="/daily-sales" 
+                className={`font-medium transition-colors hover:text-primary ${
+                  isActive('/daily-sales') ? 'text-primary' : 'text-foreground'
+                }`}
+              >
+                Daily Sales
+              </Link>
+            )}
             <a 
               href="tel:023094707" 
               className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -57,6 +65,19 @@ const Navigation = () => {
               <Phone className="h-4 w-4" />
               <span>02 309 4707</span>
             </a>
+            {user ? (
+              <Button variant="outline" size="sm" onClick={handleSignOut}>
+                <LogOut className="h-4 w-4 mr-2" />
+                Logout
+              </Button>
+            ) : (
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/auth">
+                  <LogIn className="h-4 w-4 mr-2" />
+                  Admin Login
+                </Link>
+              </Button>
+            )}
           </div>
           
           <div className="md:hidden">
@@ -94,14 +115,16 @@ const Navigation = () => {
           >
             Menu
           </Link>
-          <Link 
-            to="/daily-sales" 
-            className={`text-sm font-medium transition-colors hover:text-primary ${
-              isActive('/daily-sales') ? 'text-primary' : 'text-foreground'
-            }`}
-          >
-            Sales
-          </Link>
+          {isAdmin && (
+            <Link 
+              to="/daily-sales" 
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive('/daily-sales') ? 'text-primary' : 'text-foreground'
+              }`}
+            >
+              Sales
+            </Link>
+          )}
         </div>
       </div>
     </nav>
