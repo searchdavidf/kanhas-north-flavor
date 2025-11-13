@@ -26,9 +26,14 @@ const formSchema = z.object({
       val === undefined || val === "" || (!isNaN(Number(val)) && Number(val) >= 0), {
       message: "Must be a valid positive number",
     }),
-  bankSale: z.string().refine((val) => !isNaN(Number(val)) && Number(val) >= 0, {
-    message: "Must be a valid positive number",
-  }),
+  bankSale: z
+    .string()
+    .optional()
+    .refine(
+      (val) =>
+        val === undefined || val === "" || (!isNaN(Number(val)) && Number(val) >= 0), {
+        message: "Must be a valid positive number",
+      }),
   teaCounterSale: z
     .string()
 .optional()
@@ -261,7 +266,7 @@ const DailySales = () => {
                       name="cashSale"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Cash Sale *</FormLabel>
+                          <FormLabel className="text-base">Cash Sale</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -282,7 +287,7 @@ const DailySales = () => {
                       name="bankSale"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Bank Sale *</FormLabel>
+                          <FormLabel className="text-base">Bank Sale</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -303,7 +308,7 @@ const DailySales = () => {
                       name="teaCounterSale"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Tea Counter Sale *</FormLabel>
+                          <FormLabel className="text-base">Tea Counter Sale</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -324,7 +329,7 @@ const DailySales = () => {
                       name="creditSale"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Credit Sale *</FormLabel>
+                          <FormLabel className="text-base">Credit Sale</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -345,7 +350,7 @@ const DailySales = () => {
                       name="canteenCashSale"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Canteen Cash Sale *</FormLabel>
+                          <FormLabel className="text-base">Canteen Cash Sale</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -366,7 +371,7 @@ const DailySales = () => {
                       name="canteenBankSale"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Canteen Bank Sale *</FormLabel>
+                          <FormLabel className="text-base">Canteen Bank Sale</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -387,7 +392,7 @@ const DailySales = () => {
                       name="totalExpense"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Total Expense *</FormLabel>
+                          <FormLabel className="text-base">Total Expense</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -408,7 +413,7 @@ const DailySales = () => {
                       name="depositToBox"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Deposit to Box *</FormLabel>
+                          <FormLabel className="text-base">Deposit to Box</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -429,7 +434,7 @@ const DailySales = () => {
                       name="canteenDepositToBox"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Canteen Deposit to Box *</FormLabel>
+                          <FormLabel className="text-base">Canteen Deposit to Box</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -450,7 +455,7 @@ const DailySales = () => {
                       name="closingBalance"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Closing Balance *</FormLabel>
+                          <FormLabel className="text-base">Closing Balance</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -471,7 +476,7 @@ const DailySales = () => {
                       name="cashOutDepositBox"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Cash out Deposit Box *</FormLabel>
+                          <FormLabel className="text-base">Cash out Deposit Box</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -492,7 +497,7 @@ const DailySales = () => {
                       name="careemSales"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Careem Sales *</FormLabel>
+                          <FormLabel className="text-base">Careem Sales</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -513,7 +518,7 @@ const DailySales = () => {
                       name="noonSales"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Noon Sales *</FormLabel>
+                          <FormLabel className="text-base">Noon Sales</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -534,7 +539,7 @@ const DailySales = () => {
                       name="talabatSales"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">Talabat Sales *</FormLabel>
+                          <FormLabel className="text-base">Talabat Sales</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
