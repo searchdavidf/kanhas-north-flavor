@@ -4,10 +4,24 @@ interface MenuCardProps {
   name: string;
   description: string;
   price: string;
-  image: string;
+  image?: string;
 }
 
 const MenuCard = ({ name, description, price, image }: MenuCardProps) => {
+  if (!image) {
+    return (
+      <Card className="overflow-hidden group hover:shadow-lg transition-all duration-300 border-border bg-card">
+        <CardContent className="p-5">
+          <div className="flex items-start justify-between gap-3 mb-2">
+            <h3 className="text-lg font-semibold text-foreground flex-1">{name}</h3>
+            <span className="text-lg font-bold text-primary whitespace-nowrap">{price}</span>
+          </div>
+          <p className="text-sm text-muted-foreground">{description}</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
     <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-border bg-card">
       <div className="relative h-64 overflow-hidden">
