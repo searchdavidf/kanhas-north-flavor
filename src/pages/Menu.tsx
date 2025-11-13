@@ -51,7 +51,7 @@ const Menu = () => {
     { name: "Butter Paneers", description: "Cottage cheese in rich butter tomato gravy", price: "AED 24", image: paneerTikka },
     { name: "Kadai Paneer", description: "Cottage cheese cooked in kadai with bell peppers", price: "AED 24", image: paneerTikka },
     { name: "Malai Kofta", description: "Cottage cheese dumplings in creamy gravy", price: "AED 22", image: paneerTikka },
-    { name: "Palak Paneer", description: "Cottage cheese in spinach gravy", price: "AED 22", image: dalMakhani },
+    { name: "Palak Paneer", description: "Cottage cheese in spinach gravy", price: "AED 22", image: paneerTikka },
     { name: "Matar Paneer", description: "Cottage cheese with green peas in tomato gravy", price: "AED 24", image: paneerTikka },
     { name: "Shahi Paneer", description: "Royal cottage cheese in rich creamy gravy", price: "AED 22", image: paneerTikka },
     { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22", image: paneerTikka },
@@ -63,7 +63,7 @@ const Menu = () => {
     { name: "Daal Palak", description: "Lentils cooked with spinach", price: "AED 19", image: dalMakhani },
     { name: "Daal Panchratan", description: "Five types of lentils cooked together", price: "AED 20", image: dalMakhani },
     { name: "Daal Tadka", description: "Yellow lentils tempered with spices", price: "AED 18", image: dalMakhani },
-    { name: "Daal makhani", description: "Black lentils in rich buttery gravy", price: "AED 20", image: dalMakhani },
+    { name: "Daal Makhani", description: "Black lentils in rich buttery gravy", price: "AED 20", image: dalMakhani },
     { name: "Langar Wali Daal", description: "Traditional Gurudwara style lentils", price: "AED 22", image: dalMakhani }
   ];
 
@@ -95,12 +95,12 @@ const Menu = () => {
     { name: "Tawa Roti", description: "Whole wheat flatbread", price: "AED 2/3", image: butterNaan },
     { name: "Ajwaini Paratha", description: "Flatbread with carom seeds", price: "AED 4", image: butterNaan },
     { name: "Multigrain Roti", description: "Healthy multi-grain flatbread", price: "AED 4", image: butterNaan },
-    { name: "Missi roti", description: "Gram flour flatbread", price: "AED 5", image: butterNaan },
+    { name: "Missi Roti", description: "Gram flour flatbread", price: "AED 5", image: butterNaan },
     { name: "Makke ki Roti", description: "Corn flour flatbread", price: "AED 5", image: butterNaan },
     { name: "Lachha Paratha", description: "Multi-layered flaky bread", price: "AED 4", image: butterNaan },
     { name: "Grilled Chapati", description: "Charcoal grilled chapati (5pm onwards)", price: "AED 4", image: butterNaan },
     { name: "Cheese or Chocolate Paratha", description: "Sweet stuffed paratha", price: "AED 15", image: butterNaan },
-    { name: "Bread basket", description: "2 Tawa roti, 2 Ajwaini roti, 2 lachha Paratha", price: "AED 20", image: butterNaan }
+    { name: "Bread Basket", description: "2 Tawa roti, 2 Ajwaini roti, 2 lachha Paratha", price: "AED 20", image: butterNaan }
   ];
 
   const rice = [
