@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import MenuCard from "@/components/MenuCard";
+import ChatBot from "@/components/ChatBot";
 import heroImage from "@/assets/hero-restaurant.jpg";
 import chholeBhature from "@/assets/chole-bhature-real.jpg";
 import dalMakhani from "@/assets/dal-makhani.jpg";
@@ -34,6 +35,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <ChatBot />
 
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
