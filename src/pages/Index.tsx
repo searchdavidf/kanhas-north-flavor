@@ -137,11 +137,11 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-8 px-4">
+      <footer className="bg-accent text-accent-foreground py-8 px-4">
         <div className="container mx-auto text-center">
           <h3 className="text-2xl font-bold mb-2">Kanhas Veg Restaurant</h3>
-          <p className="text-background/70 mb-4">Authentic North Indian Vegetarian Cuisine</p>
-          <p className="text-sm text-background/60">
+          <p className="text-accent-foreground/70 mb-4">Authentic North Indian Vegetarian Cuisine</p>
+          <p className="text-sm text-accent-foreground/60">
             © 2025 Kanhas Veg Restaurant. All rights reserved.
           </p>
         </div>
