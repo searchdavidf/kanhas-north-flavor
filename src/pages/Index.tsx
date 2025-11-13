@@ -12,10 +12,10 @@ import samosa from "@/assets/samosa.jpg";
 const Index = () => {
   const featuredDishes = [
     {
-      name: "Paneer Tikka",
-      description: "Succulent cottage cheese cubes marinated in aromatic spices and grilled to perfection",
-      price: "AED 28",
-      image: paneerTikka
+      name: "Chhole Bhature",
+      description: "Fluffy bhature with spicy, flavorful chhole — a classic North Indian indulgence.",
+      price: "AED 15",
+      image: Chhole Bhature
     },
     {
       name: "Dal Makhani",
