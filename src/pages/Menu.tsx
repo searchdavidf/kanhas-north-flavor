@@ -34,6 +34,14 @@ import alooPalakReal from "@/assets/aloo-palak-real.jpg";
 import bhindiMasala from "@/assets/bhindi-masala.jpg";
 import bhindiDoPyaza from "@/assets/bhindi-do-pyaza.jpg";
 import chanaMasala from "@/assets/chana-masala.jpg";
+import tawaRoti from "@/assets/tawa-roti.jpg";
+import butterPaneer from "@/assets/butter-paneer.jpg";
+import palakPaneerReal from "@/assets/palak-paneer-real.jpg";
+import matarPaneer from "@/assets/matar-paneer.jpg";
+import shahiPaneer from "@/assets/shahi-paneer.jpg";
+import rajmaMasala from "@/assets/rajma-masala.jpg";
+import gobiManchurian from "@/assets/gobi-manchurian.jpg";
+import lachhaParathaReal from "@/assets/lachha-paratha-real.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -74,12 +82,12 @@ const Menu = () => {
     { name: "Paneer Pasanda", description: "Stuffed cottage cheese in creamy gravy", price: "AED 22", image: paneerTikka },
     { name: "Paneer Bhurji", description: "Scrambled cottage cheese with spices", price: "AED 19", image: paneerTikka },
     { name: "Paneer tikka masala", description: "Grilled cottage cheese in spicy tomato gravy", price: "AED 24", image: paneerTikka },
-    { name: "Butter Paneers", description: "Cottage cheese in rich butter tomato gravy", price: "AED 24", image: paneerTikka },
+    { name: "Butter Paneers", description: "Cottage cheese in rich butter tomato gravy", price: "AED 24", image: butterPaneer },
     { name: "Kadai Paneer", description: "Cottage cheese cooked in kadai with bell peppers", price: "AED 24", image: kadaiPaneer },
-    { name: "Malai Kofta", description: "Cottage cheese dumplings in creamy gravy", price: "AED 22", image: paneerTikka },
-    { name: "Palak Paneer", description: "Cottage cheese in spinach gravy", price: "AED 22", image: palakPaneer },
-    { name: "Matar Paneer", description: "Cottage cheese with green peas in tomato gravy", price: "AED 24", image: paneerTikka },
-    { name: "Shahi Paneer", description: "Royal cottage cheese in rich creamy gravy", price: "AED 22", image: paneerTikka },
+    { name: "Malai Kofta", description: "Cottage cheese dumplings in creamy gravy", price: "AED 22", image: gobiManchurian },
+    { name: "Palak Paneer", description: "Cottage cheese in spinach gravy", price: "AED 22", image: palakPaneerReal },
+    { name: "Matar Paneer", description: "Cottage cheese with green peas in tomato gravy", price: "AED 24", image: matarPaneer },
+    { name: "Shahi Paneer", description: "Royal cottage cheese in rich creamy gravy", price: "AED 22", image: shahiPaneer },
     { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22", image: paneerTikka },
     { name: "Makai Paneer", description: "Cottage cheese with sweet corn", price: "AED 22", image: paneerTikka },
     { name: "Chana Masala", description: "Spicy chickpea curry", price: "AED 15", image: chanaMasala }
@@ -106,7 +114,7 @@ const Menu = () => {
     { name: "Kashmiri Dam Aloo", description: "Baby potatoes in rich Kashmiri gravy", price: "AED 22", image: alooPalak },
     { name: "Veg Maratha", description: "Mixed vegetables Marathi style", price: "AED 28", image: vegBiryani },
     { name: "Kanha's Special Tawa veg", description: "Arabi, baingan, lotus stem, potato etc", price: "AED 28", image: vegBiryani },
-    { name: "Punjabi Rajma Masala", description: "Kidney beans in rich Punjabi gravy", price: "AED 15", image: rajmaChawal },
+    { name: "Punjabi Rajma Masala", description: "Kidney beans in rich Punjabi gravy", price: "AED 15", image: rajmaMasala },
     { name: "Gobhi Adraki", description: "Cauliflower with ginger", price: "AED 15", image: gobhiAdraki },
     { name: "Jeera Aloo", description: "Potatoes tempered with cumin seeds", price: "AED 15", image: jeeraAloo },
     { name: "Aloo Palak", description: "Potatoes cooked with spinach", price: "AED 15", image: alooPalakReal },
@@ -118,15 +126,15 @@ const Menu = () => {
   ];
 
   const breads = [
-    { name: "Tawa Roti", description: "Whole wheat flatbread", price: "AED 2/3", image: butterNaan },
+    { name: "Tawa Roti", description: "Whole wheat flatbread", price: "AED 2/3", image: tawaRoti },
     { name: "Ajwaini Paratha", description: "Flatbread with carom seeds", price: "AED 4", image: ajwainiParatha },
-    { name: "Multigrain Roti", description: "Healthy multi-grain flatbread", price: "AED 4", image: butterNaan },
-    { name: "Missi Roti", description: "Gram flour flatbread", price: "AED 5", image: butterNaan },
-    { name: "Makke ki Roti", description: "Corn flour flatbread", price: "AED 5", image: butterNaan },
-    { name: "Lachha Paratha", description: "Multi-layered flaky bread", price: "AED 4", image: lachhaParatha },
-    { name: "Grilled Chapati", description: "Charcoal grilled chapati (5pm onwards)", price: "AED 4", image: butterNaan },
+    { name: "Multigrain Roti", description: "Healthy multi-grain flatbread", price: "AED 4", image: tawaRoti },
+    { name: "Missi Roti", description: "Gram flour flatbread", price: "AED 5", image: tawaRoti },
+    { name: "Makke ki Roti", description: "Corn flour flatbread", price: "AED 5", image: tawaRoti },
+    { name: "Lachha Paratha", description: "Multi-layered flaky bread", price: "AED 4", image: lachhaParathaReal },
+    { name: "Grilled Chapati", description: "Charcoal grilled chapati (5pm onwards)", price: "AED 4", image: tawaRoti },
     { name: "Cheese or Chocolate Paratha", description: "Sweet stuffed paratha", price: "AED 15", image: lachhaParatha },
-    { name: "Bread Basket", description: "2 Tawa roti, 2 Ajwaini roti, 2 lachha Paratha", price: "AED 20", image: butterNaan }
+    { name: "Bread Basket", description: "2 Tawa roti, 2 Ajwaini roti, 2 lachha Paratha", price: "AED 20", image: tawaRoti }
   ];
 
   const rice = [
