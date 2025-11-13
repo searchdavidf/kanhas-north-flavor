@@ -15,34 +15,30 @@ const Index = () => {
       name: "Chhole Bhature",
       description: "Fluffy bhature with spicy, flavorful chhole — a classic North Indian indulgence.",
       price: "AED 15",
-      image: Chhole Bhature
+      image: ChholeBhature,
     },
     {
       name: "Dal Makhani",
       description: "Slow-cooked black lentils in rich buttery tomato gravy with aromatic spices",
       price: "AED 22",
-      image: dalMakhani
+      image: dalMakhani,
     },
     {
       name: "Samosa",
       description: "Crispy golden pastries filled with spiced potatoes and peas, served with chutneys",
       price: "AED 12",
-      image: samosa
-    }
+      image: samosa,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Kanhas Veg Restaurant Interior" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Kanhas Veg Restaurant Interior" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -57,7 +53,12 @@ const Index = () => {
             <Button size="lg" asChild className="text-lg">
               <Link to="/menu">View Our Menu</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="text-lg bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-foreground">
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="text-lg bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-foreground"
+            >
               <a href="tel:023094707">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -100,36 +101,32 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Location</h3>
                 <p className="text-muted-foreground">
-                  Musaffah Shabiya 10<br />
+                  Musaffah Shabiya 10
+                  <br />
                   Near Madina Hyper Market
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="text-center p-6 border-border">
               <CardContent className="pt-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                   <Phone className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Contact</h3>
-                <a 
-                  href="tel:023094707" 
-                  className="text-lg text-primary hover:underline"
-                >
+                <a href="tel:023094707" className="text-lg text-primary hover:underline">
                   02 309 4707
                 </a>
               </CardContent>
             </Card>
-            
+
             <Card className="text-center p-6 border-border">
               <CardContent className="pt-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                   <Clock className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Hours</h3>
-                <p className="text-muted-foreground">
-                  Daily: 11:00 AM - 11:00 PM
-                </p>
+                <p className="text-muted-foreground">Daily: 11:00 AM - 11:00 PM</p>
               </CardContent>
             </Card>
           </div>
@@ -141,9 +138,7 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <h3 className="text-2xl font-bold mb-2">Kanhas Veg Restaurant</h3>
           <p className="text-accent-foreground/70 mb-4">Authentic North Indian Vegetarian Cuisine</p>
-          <p className="text-sm text-accent-foreground/60">
-            © 2025 Kanhas Veg Restaurant. All rights reserved.
-          </p>
+          <p className="text-sm text-accent-foreground/60">© 2025 Kanhas Veg Restaurant. All rights reserved.</p>
         </div>
       </footer>
     </div>
