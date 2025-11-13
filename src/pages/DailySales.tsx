@@ -150,16 +150,13 @@ const DailySales = () => {
       console.log("Submitting to webhook:", payload);
 
       // Send to n8n webhook
-      const response = await fetch(
-        "https://searchdavidf.app.n8n.cloud/webhook-test/cad397b4-ece6-41fa-b107-e50f4afaf125",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
+      const response = await fetch("https://searchdavidf.app.n8n.cloud/webhook/cad397b4-ece6-41fa-b107-e50f4afaf125", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify(payload),
+      });
 
       if (!response.ok) {
         throw new Error(`Webhook returned status ${response.status}`);
