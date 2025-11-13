@@ -59,6 +59,9 @@ import chanaChaat from "@/assets/chana-chaat.jpg";
 import papdiChaat from "@/assets/papdi-chaat.jpg";
 import pavBhaji from "@/assets/pav-bhaji.jpg";
 import vadaPav from "@/assets/vada-pav.jpg";
+import samosaChaatReal from "@/assets/samosa-chaat-real.jpg";
+import paniPuri from "@/assets/pani-puri.jpg";
+import sevPuri from "@/assets/sev-puri.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -177,11 +180,11 @@ const Menu = () => {
   ];
 
   const chaatSnacks = [
-    { name: "Pani Puri (6 Pc)", description: "Crispy puri with spicy water", price: "AED 8", image: samosa },
+    { name: "Pani Puri (6 Pc)", description: "Crispy puri with spicy water", price: "AED 8", image: paniPuri },
     { name: "Bhel Puri", description: "Puffed rice mixed with chutneys", price: "AED 12", image: bhelPuriReal },
-    { name: "Sev Puri", description: "Crispy puri topped with sev and chutneys", price: "AED 12", image: samosa },
+    { name: "Sev Puri", description: "Crispy puri topped with sev and chutneys", price: "AED 12", image: sevPuri },
     { name: "Dahi Puri", description: "Puri filled with yogurt and chutneys", price: "AED 12", image: dahiPuri },
-    { name: "Chhole Samosa (1 pc)", description: "Samosa topped with chickpea curry", price: "AED 10", image: choleBhatureReal },
+    { name: "Chhole Samosa (1 pc)", description: "Samosa topped with chickpea curry", price: "AED 10", image: samosaChaatReal },
     { name: "Raj Kachori", description: "Large kachori filled with potatoes and chutneys", price: "AED 14", image: samosa },
     { name: "Dahi Bhalla", description: "Lentil dumplings in yogurt", price: "AED 10", image: dahiPuri },
     { name: "Papdi Chaat", description: "Crispy papdi with potatoes and chutneys", price: "AED 12", image: papdiChaat },
