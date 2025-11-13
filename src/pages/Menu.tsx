@@ -44,6 +44,13 @@ import gobiManchurian from "@/assets/gobi-manchurian.jpg";
 import lachhaParathaReal from "@/assets/lachha-paratha-real.jpg";
 import matarPulao from "@/assets/matar-pulao.jpg";
 import jeeraRice from "@/assets/jeera-rice.jpg";
+import springRolls from "@/assets/spring-rolls.jpg";
+import vegChowmein from "@/assets/veg-chowmein.jpg";
+import vegFriedRice from "@/assets/veg-fried-rice.jpg";
+import singaporeNoodles from "@/assets/singapore-noodles.jpg";
+import bhelPuri from "@/assets/bhel-puri.jpg";
+import honeyChilliPotato from "@/assets/honey-chilli-potato.jpg";
+import chilliPaneer from "@/assets/chilli-paneer.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -139,6 +146,55 @@ const Menu = () => {
     { name: "Bread Basket", description: "2 Tawa roti, 2 Ajwaini roti, 2 lachha Paratha", price: "AED 20", image: tawaRoti }
   ];
 
+  const chinese = [
+    { name: "Spring Rolls (2 pcs)", description: "Crispy vegetable spring rolls", price: "AED 14", image: springRolls },
+    { name: "Hakka Noodles", description: "Stir-fried noodles with vegetables", price: "AED 19", image: vegChowmein },
+    { name: "Schezwan Noodles", description: "Spicy Schezwan style noodles", price: "AED 19", image: vegChowmein },
+    { name: "Singapuri Noodles", description: "Singapore style curry noodles", price: "AED 22", image: singaporeNoodles },
+    { name: "Desi Chowmein", description: "Indian style chowmein", price: "AED 22", image: vegChowmein },
+    { name: "Fried Rice", description: "Vegetable fried rice", price: "AED 19", image: vegFriedRice },
+    { name: "Golden fry baby corn", description: "Crispy fried baby corn", price: "AED 20", image: gobiManchurian },
+    { name: "Crispy corn", description: "Crispy corn kernels with spices", price: "AED 22", image: gobiManchurian },
+    { name: "Gobhi-65", description: "Spicy fried cauliflower", price: "AED 19", image: gobiManchurian },
+    { name: "Crispy Veg", description: "Assorted crispy vegetables", price: "AED 19", image: gobiManchurian },
+    { name: "Gobhi Manchuriyan (Dry/Semi gravy)", description: "Cauliflower in Manchurian sauce", price: "AED 19", image: gobiManchurian },
+    { name: "Vegetable Manchuriyan (Dry/Semi gravy)", description: "Mixed vegetable balls in Manchurian sauce", price: "AED 19", image: gobiManchurian },
+    { name: "Honey chilly potato", description: "Crispy potato tossed in honey chilli sauce", price: "AED 19", image: honeyChilliPotato },
+    { name: "Chilly Mushroom (Dry/Semi Gravy)", description: "Mushrooms in spicy chilli sauce", price: "AED 22", image: kadaiMushroom },
+    { name: "Chilly Paneer (Dry/Semi Gravy)", description: "Cottage cheese in chilli sauce", price: "AED 25", image: chilliPaneer },
+    { name: "Paneer pepper fry (Dry)", description: "Cottage cheese with pepper", price: "AED 22", image: kadaiPaneer },
+    { name: "Schezwan Paneer (Dry/Semi Gravy)", description: "Cottage cheese in Schezwan sauce", price: "AED 25", image: chilliPaneer },
+    { name: "Ginger Paneer (Dry/Semi Gravy)", description: "Cottage cheese with ginger", price: "AED 25", image: kadaiPaneer },
+    { name: "Himalyan Momos 8pcs", description: "Steamed vegetable dumplings", price: "AED 19", image: springRolls }
+  ];
+
+  const chaatSnacks = [
+    { name: "Pani Puri (6 Pc)", description: "Crispy puri with spicy water", price: "AED 8", image: samosa },
+    { name: "Bhel Puri", description: "Puffed rice mixed with chutneys", price: "AED 12", image: bhelPuri },
+    { name: "Sev Puri", description: "Crispy puri topped with sev and chutneys", price: "AED 12", image: samosa },
+    { name: "Dahi Puri", description: "Puri filled with yogurt and chutneys", price: "AED 12", image: samosa },
+    { name: "Chhole Samosa (1 pc)", description: "Samosa topped with chickpea curry", price: "AED 10", image: choleBhatureReal },
+    { name: "Raj Kachori", description: "Large kachori filled with potatoes and chutneys", price: "AED 14", image: samosa },
+    { name: "Dahi Bhalla", description: "Lentil dumplings in yogurt", price: "AED 10", image: samosa },
+    { name: "Papdi Chaat", description: "Crispy papdi with potatoes and chutneys", price: "AED 12", image: samosa },
+    { name: "Bhalla Papdi", description: "Combination of bhalla and papdi", price: "AED 12", image: samosa },
+    { name: "Ragda Patties", description: "Potato patties with pea curry", price: "AED 12", image: samosa },
+    { name: "Samosa Chaat", description: "Samosa topped with chickpeas and chutneys", price: "AED 12", image: samosa },
+    { name: "Kachori Chaat", description: "Kachori topped with chutneys", price: "AED 12", image: samosa },
+    { name: "Chana Chaat", description: "Chickpea salad with spices", price: "AED 10", image: chanaMasala },
+    { name: "Chinese Bhel", description: "Indo-Chinese fusion snack", price: "AED 15", image: bhelPuri },
+    { name: "Mix Chaat", description: "Mixed chaat varieties", price: "AED 15", image: samosa },
+    { name: "Kanha's Special Chaat", description: "House special chaat", price: "AED 19", image: samosa },
+    { name: "Dabeli", description: "Spiced potato filling in bun", price: "AED 8", image: samosa },
+    { name: "Samosa Pav", description: "Samosa served in pav bread", price: "AED 6", image: samosa },
+    { name: "Vada Pav", description: "Potato fritter in pav bread", price: "AED 6", image: samosa },
+    { name: "Pav Bhaji", description: "Mixed vegetable curry with pav", price: "AED 12", image: samosa },
+    { name: "Cheese Pav Bhaji", description: "Pav bhaji topped with cheese", price: "AED 15", image: samosa },
+    { name: "Punjabi Samosa", description: "Classic North Indian samosa", price: "AED 3", image: samosa },
+    { name: "Bread Pakoda 2pcs", description: "Bread fritters", price: "AED 6", image: samosa },
+    { name: "Daal Kachori", description: "Lentil stuffed kachori", price: "AED 2", image: samosa }
+  ];
+
   const rice = [
     { name: "White Rice", description: "Steamed basmati rice", price: "AED 10", image: vegBiryani },
     { name: "Jeera Pulao", description: "Fragrant cumin flavored rice", price: "AED 12", image: jeeraRice },
@@ -199,6 +255,8 @@ const Menu = () => {
             <TabsList className="w-full justify-start mb-8 flex-wrap h-auto gap-2 bg-accent/50">
               <TabsTrigger value="south-nashta" className="text-base">South ka Nashta</TabsTrigger>
               <TabsTrigger value="north-nashta" className="text-base">North ka Nashta</TabsTrigger>
+              <TabsTrigger value="chinese" className="text-base">Chinese</TabsTrigger>
+              <TabsTrigger value="chaat-snacks" className="text-base">Chaat & Snacks</TabsTrigger>
               <TabsTrigger value="paneer" className="text-base">Paneer Dishes</TabsTrigger>
               <TabsTrigger value="daal" className="text-base">Daal</TabsTrigger>
               <TabsTrigger value="vegetables" className="text-base">Vegetables</TabsTrigger>
@@ -214,6 +272,24 @@ const Menu = () => {
               <h2 className="text-3xl font-bold mb-6 text-primary">South ka Nashta</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {southKaNashta.map((item, index) => (
+                  <MenuCard key={index} {...item} />
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="chinese">
+              <h2 className="text-3xl font-bold mb-6 text-primary">Chinese</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {chinese.map((item, index) => (
+                  <MenuCard key={index} {...item} />
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="chaat-snacks">
+              <h2 className="text-3xl font-bold mb-6 text-primary">Chaat & Snacks</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {chaatSnacks.map((item, index) => (
                   <MenuCard key={index} {...item} />
                 ))}
               </div>
