@@ -16,6 +16,14 @@ import lachhaParatha from "@/assets/lachha-paratha.jpg";
 import rajmaChawal from "@/assets/rajma-chawal.jpg";
 import alooPalak from "@/assets/aloo-palak.jpg";
 import kadaiMushroom from "@/assets/kadai-mushroom.jpg";
+import ajwainiParatha from "@/assets/ajwaini-paratha.jpg";
+import daalBatiChurma from "@/assets/daal-bati-churma.jpg";
+import rajmaChawalReal from "@/assets/rajma-chawal-real.jpg";
+import choleChawal from "@/assets/chole-chawal.jpg";
+import alooParatha from "@/assets/aloo-paratha.jpg";
+import choleBhatureReal from "@/assets/chole-bhature-real.jpg";
+import pooriAloo from "@/assets/poori-aloo.jpg";
+import deluxeThali from "@/assets/deluxe-thali.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -39,14 +47,14 @@ const Menu = () => {
   ];
 
   const northKaNashta = [
-    { name: "Poori & Aloo Sabji", description: "Fluffy fried bread with potato curry", price: "AED 12", image: choleBhature },
-    { name: "Chhole Bhature", description: "Fluffy fried bread with spicy chickpea curry", price: "AED 15", image: choleBhature },
-    { name: "Bedami Poori", description: "Stuffed fried bread with lentils", price: "AED 19", image: choleBhature },
+    { name: "Poori & Aloo Sabji", description: "Fluffy fried bread with potato curry", price: "AED 12", image: pooriAloo },
+    { name: "Chhole Bhature", description: "Fluffy fried bread with spicy chickpea curry", price: "AED 15", image: choleBhatureReal },
+    { name: "Bedami Poori", description: "Stuffed fried bread with lentils", price: "AED 19", image: pooriAloo },
     { name: "Veg Grill Sandwich", description: "Grilled sandwich with mixed vegetables", price: "AED 15", image: samosa },
     { name: "Indori Poha", description: "Flattened rice cooked Indori style", price: "AED 12", image: samosa },
     { name: "Sevai Khichdi", description: "Vermicelli cooked with spices", price: "AED 12", image: samosa },
     { name: "Maggie Masala", description: "Spicy Indian style instant noodles", price: "AED 10", image: samosa },
-    { name: "Stuffed Parathas (Aloo/Mooli/Gobhi)", description: "Flatbread stuffed with potato/radish/cauliflower", price: "AED 10", image: lachhaParatha },
+    { name: "Stuffed Parathas (Aloo/Mooli/Gobhi)", description: "Flatbread stuffed with potato/radish/cauliflower", price: "AED 10", image: alooParatha },
     { name: "Paneer Paratha", description: "Flatbread stuffed with cottage cheese", price: "AED 15", image: lachhaParatha },
     { name: "Jaipuri Paratha", description: "Special Jaipuri style stuffed paratha", price: "AED 15", image: lachhaParatha }
   ];
@@ -101,7 +109,7 @@ const Menu = () => {
 
   const breads = [
     { name: "Tawa Roti", description: "Whole wheat flatbread", price: "AED 2/3", image: butterNaan },
-    { name: "Ajwaini Paratha", description: "Flatbread with carom seeds", price: "AED 4", image: lachhaParatha },
+    { name: "Ajwaini Paratha", description: "Flatbread with carom seeds", price: "AED 4", image: ajwainiParatha },
     { name: "Multigrain Roti", description: "Healthy multi-grain flatbread", price: "AED 4", image: butterNaan },
     { name: "Missi Roti", description: "Gram flour flatbread", price: "AED 5", image: butterNaan },
     { name: "Makke ki Roti", description: "Corn flour flatbread", price: "AED 5", image: butterNaan },
@@ -122,11 +130,11 @@ const Menu = () => {
   ];
 
   const combos = [
-    { name: "4 pcs Mini Daal Bati Churma", description: "Traditional Rajasthani combo", price: "AED 19", image: samosa },
-    { name: "Chhole Chawal", description: "Chickpea curry with rice", price: "AED 15", image: choleBhature },
+    { name: "4 pcs Mini Daal Bati Churma", description: "Traditional Rajasthani combo", price: "AED 19", image: daalBatiChurma },
+    { name: "Chhole Chawal", description: "Chickpea curry with rice", price: "AED 15", image: choleChawal },
     { name: "Kadhi Chawal", description: "Yogurt curry with rice", price: "AED 15", image: vegBiryani },
-    { name: "Rajma Chawal", description: "Kidney beans curry with rice", price: "AED 15", image: rajmaChawal },
-    { name: "Deluxe Indian Thali", description: "1 snacks of the day, masala chhach, Daal of the day, paneer sabji, 1 Lachha Paratha or Rice, 2 Chapati, pickle, green Salad, 1 sweet", price: "AED 22", image: vegBiryani }
+    { name: "Rajma Chawal", description: "Kidney beans curry with rice", price: "AED 15", image: rajmaChawalReal },
+    { name: "Deluxe Indian Thali", description: "1 snacks of the day, masala chhach, Daal of the day, paneer sabji, 1 Lachha Paratha or Rice, 2 Chapati, pickle, green Salad, 1 sweet", price: "AED 22", image: deluxeThali }
   ];
 
   const saladsRaita = [
