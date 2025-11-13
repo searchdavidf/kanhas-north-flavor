@@ -10,6 +10,12 @@ import vegBiryani from "@/assets/veg-biryani.jpg";
 import gulabJamun from "@/assets/gulab-jamun.jpg";
 import masalaDosa from "@/assets/masala-dosa.jpg";
 import idliSambar from "@/assets/idli-sambar.jpg";
+import idliSambarReal from "@/assets/idli-sambar-real.jpg";
+import vadaSambarReal from "@/assets/vada-sambar-real.jpg";
+import sadaDosaReal from "@/assets/sada-dosa-real.jpg";
+import masalaDosaReal from "@/assets/masala-dosa-real.jpg";
+import gheeRoastDosaReal from "@/assets/ghee-roast-dosa-real.jpg";
+import uttapamReal from "@/assets/uttapam-real.jpg";
 import palakPaneer from "@/assets/palak-paneer.jpg";
 import kadaiPaneer from "@/assets/kadai-paneer.jpg";
 import lachhaParatha from "@/assets/lachha-paratha.jpg";
@@ -65,23 +71,23 @@ import sevPuri from "@/assets/sev-puri.jpg";
 
 const Menu = () => {
   const southKaNashta = [
-    { name: "Idly Sambar", description: "Steamed rice cakes served with aromatic sambar", price: "AED 7", image: idliSambar },
-    { name: "Vada Sambar", description: "Crispy lentil donuts served with sambar", price: "AED 7", image: idliSambar },
-    { name: "Sada Dosa", description: "Thin and crispy rice crepe", price: "AED 9", image: masalaDosa },
-    { name: "Mysore Sada Dosa", description: "Dosa with spicy red chutney", price: "AED 14", image: masalaDosa },
-    { name: "Onion Rawa Sada dosa", description: "Semolina dosa with onions", price: "AED 12", image: masalaDosa },
-    { name: "Paper Sada Dosa", description: "Extra thin and crispy dosa", price: "AED 10", image: masalaDosa },
-    { name: "Masala Dosa", description: "Crispy dosa filled with spiced potato masala", price: "AED 9", image: masalaDosa },
-    { name: "Onion Rawa Masala Dosa", description: "Semolina dosa with onion and potato filling", price: "AED 16", image: masalaDosa },
-    { name: "Ghee Roast Masala Dosa", description: "Crispy dosa roasted in ghee with potato masala", price: "AED 16", image: masalaDosa },
-    { name: "Paper Masala Dosa", description: "Extra thin dosa with potato masala", price: "AED 15", image: masalaDosa },
-    { name: "Onion & Tomato Utthappam", description: "Thick rice pancake with onions and tomatoes", price: "AED 10", image: masalaDosa },
-    { name: "Cheese uttappam", description: "Thick rice pancake topped with cheese", price: "AED 15", image: masalaDosa },
-    { name: "South ka tiffin", description: "Mini dosa, idli, vada, upma, kesari, chutney, sambhal", price: "AED 19", image: idliSambar },
-    { name: "Multigrain Dosa", description: "Healthy dosa made with multiple grains", price: "AED 19", image: masalaDosa },
-    { name: "Ragi Dosa", description: "Nutritious finger millet dosa", price: "AED 19", image: masalaDosa },
-    { name: "Table family Dosa", description: "Large family-sized dosa", price: "AED 22", image: masalaDosa },
-    { name: "Appam & Curry", description: "Soft rice pancake served with vegetable curry", price: "AED 10", image: idliSambar }
+    { name: "Idly Sambar", description: "Steamed rice cakes served with aromatic sambar", price: "AED 7", image: idliSambarReal },
+    { name: "Vada Sambar", description: "Crispy lentil donuts served with sambar", price: "AED 7", image: vadaSambarReal },
+    { name: "Sada Dosa", description: "Thin and crispy rice crepe", price: "AED 9", image: sadaDosaReal },
+    { name: "Mysore Sada Dosa", description: "Dosa with spicy red chutney", price: "AED 14", image: sadaDosaReal },
+    { name: "Onion Rawa Sada dosa", description: "Semolina dosa with onions", price: "AED 12", image: sadaDosaReal },
+    { name: "Paper Sada Dosa", description: "Extra thin and crispy dosa", price: "AED 10", image: sadaDosaReal },
+    { name: "Masala Dosa", description: "Crispy dosa filled with spiced potato masala", price: "AED 9", image: masalaDosaReal },
+    { name: "Onion Rawa Masala Dosa", description: "Semolina dosa with onion and potato filling", price: "AED 16", image: masalaDosaReal },
+    { name: "Ghee Roast Masala Dosa", description: "Crispy dosa roasted in ghee with potato masala", price: "AED 16", image: gheeRoastDosaReal },
+    { name: "Paper Masala Dosa", description: "Extra thin dosa with potato masala", price: "AED 15", image: masalaDosaReal },
+    { name: "Onion & Tomato Utthappam", description: "Thick rice pancake with onions and tomatoes", price: "AED 10", image: uttapamReal },
+    { name: "Cheese uttappam", description: "Thick rice pancake topped with cheese", price: "AED 15", image: uttapamReal },
+    { name: "South ka tiffin", description: "Mini dosa, idli, vada, upma, kesari, chutney, sambhal", price: "AED 19", image: idliSambarReal },
+    { name: "Multigrain Dosa", description: "Healthy dosa made with multiple grains", price: "AED 19", image: masalaDosaReal },
+    { name: "Ragi Dosa", description: "Nutritious finger millet dosa", price: "AED 19", image: masalaDosaReal },
+    { name: "Table family Dosa", description: "Large family-sized dosa", price: "AED 22", image: masalaDosaReal },
+    { name: "Appam & Curry", description: "Soft rice pancake served with vegetable curry", price: "AED 10", image: idliSambarReal }
   ];
 
   const northKaNashta = [
