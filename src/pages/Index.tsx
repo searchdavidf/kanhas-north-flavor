@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import MenuCard from "@/components/MenuCard";
 import heroImage from "@/assets/hero-restaurant.jpg";
-import paneerTikka from "@/assets/paneer-tikka.jpg";
+import chholeBhature from "@/assets/chole-bhature-real.jpg";
 import dalMakhani from "@/assets/dal-makhani.jpg";
 import samosa from "@/assets/samosa.jpg";
 
@@ -15,7 +15,7 @@ const Index = () => {
       name: "Chhole Bhature",
       description: "Fluffy bhature with spicy, flavorful chhole — a classic North Indian indulgence.",
       price: "AED 15",
-      image: ChholeBhature,
+      image: chholeBhature,
     },
     {
       name: "Dal Makhani",
