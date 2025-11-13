@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -114,8 +114,12 @@ const Index = () => {
                   <Phone className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Contact</h3>
-                <a href="tel:023094707" className="text-lg text-primary hover:underline">
+                <a href="tel:023094707" className="text-lg text-primary hover:underline block mb-2">
                   02 309 4707
+                </a>
+                <a href="mailto:contact@kanhasrestaurant.com" className="text-sm text-primary hover:underline flex items-center justify-center gap-1">
+                  <Mail className="h-4 w-4" />
+                  contact@kanhasrestaurant.com
                 </a>
               </CardContent>
             </Card>
@@ -138,6 +142,10 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <h3 className="text-2xl font-bold mb-2">Kanhas Veg Restaurant</h3>
           <p className="text-accent-foreground/70 mb-4">Authentic North Indian Vegetarian Cuisine</p>
+          <a href="https://kanhasrestaurant.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent-foreground/80 hover:text-accent-foreground mb-4">
+            <Globe className="h-4 w-4" />
+            kanhasrestaurant.com
+          </a>
           <p className="text-sm text-accent-foreground/60">© 2025 Kanhas Veg Restaurant. All rights reserved.</p>
         </div>
       </footer>
