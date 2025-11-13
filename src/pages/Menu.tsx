@@ -51,6 +51,14 @@ import singaporeNoodles from "@/assets/singapore-noodles.jpg";
 import bhelPuri from "@/assets/bhel-puri.jpg";
 import honeyChilliPotato from "@/assets/honey-chilli-potato.jpg";
 import chilliPaneer from "@/assets/chilli-paneer.jpg";
+import dabeli from "@/assets/dabeli.jpg";
+import chineseBhel from "@/assets/chinese-bhel.jpg";
+import dahiPuri from "@/assets/dahi-puri.jpg";
+import bhelPuriReal from "@/assets/bhel-puri-real.jpg";
+import chanaChaat from "@/assets/chana-chaat.jpg";
+import papdiChaat from "@/assets/papdi-chaat.jpg";
+import pavBhaji from "@/assets/pav-bhaji.jpg";
+import vadaPav from "@/assets/vada-pav.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -170,26 +178,26 @@ const Menu = () => {
 
   const chaatSnacks = [
     { name: "Pani Puri (6 Pc)", description: "Crispy puri with spicy water", price: "AED 8", image: samosa },
-    { name: "Bhel Puri", description: "Puffed rice mixed with chutneys", price: "AED 12", image: bhelPuri },
+    { name: "Bhel Puri", description: "Puffed rice mixed with chutneys", price: "AED 12", image: bhelPuriReal },
     { name: "Sev Puri", description: "Crispy puri topped with sev and chutneys", price: "AED 12", image: samosa },
-    { name: "Dahi Puri", description: "Puri filled with yogurt and chutneys", price: "AED 12", image: samosa },
+    { name: "Dahi Puri", description: "Puri filled with yogurt and chutneys", price: "AED 12", image: dahiPuri },
     { name: "Chhole Samosa (1 pc)", description: "Samosa topped with chickpea curry", price: "AED 10", image: choleBhatureReal },
     { name: "Raj Kachori", description: "Large kachori filled with potatoes and chutneys", price: "AED 14", image: samosa },
-    { name: "Dahi Bhalla", description: "Lentil dumplings in yogurt", price: "AED 10", image: samosa },
-    { name: "Papdi Chaat", description: "Crispy papdi with potatoes and chutneys", price: "AED 12", image: samosa },
-    { name: "Bhalla Papdi", description: "Combination of bhalla and papdi", price: "AED 12", image: samosa },
+    { name: "Dahi Bhalla", description: "Lentil dumplings in yogurt", price: "AED 10", image: dahiPuri },
+    { name: "Papdi Chaat", description: "Crispy papdi with potatoes and chutneys", price: "AED 12", image: papdiChaat },
+    { name: "Bhalla Papdi", description: "Combination of bhalla and papdi", price: "AED 12", image: papdiChaat },
     { name: "Ragda Patties", description: "Potato patties with pea curry", price: "AED 12", image: samosa },
     { name: "Samosa Chaat", description: "Samosa topped with chickpeas and chutneys", price: "AED 12", image: samosa },
     { name: "Kachori Chaat", description: "Kachori topped with chutneys", price: "AED 12", image: samosa },
-    { name: "Chana Chaat", description: "Chickpea salad with spices", price: "AED 10", image: chanaMasala },
-    { name: "Chinese Bhel", description: "Indo-Chinese fusion snack", price: "AED 15", image: bhelPuri },
+    { name: "Chana Chaat", description: "Chickpea salad with spices", price: "AED 10", image: chanaChaat },
+    { name: "Chinese Bhel", description: "Indo-Chinese fusion snack", price: "AED 15", image: chineseBhel },
     { name: "Mix Chaat", description: "Mixed chaat varieties", price: "AED 15", image: samosa },
-    { name: "Kanha's Special Chaat", description: "House special chaat", price: "AED 19", image: samosa },
-    { name: "Dabeli", description: "Spiced potato filling in bun", price: "AED 8", image: samosa },
+    { name: "Kanha's Special Chaat", description: "House special chaat", price: "AED 19", image: papdiChaat },
+    { name: "Dabeli", description: "Spiced potato filling in bun", price: "AED 8", image: dabeli },
     { name: "Samosa Pav", description: "Samosa served in pav bread", price: "AED 6", image: samosa },
-    { name: "Vada Pav", description: "Potato fritter in pav bread", price: "AED 6", image: samosa },
-    { name: "Pav Bhaji", description: "Mixed vegetable curry with pav", price: "AED 12", image: samosa },
-    { name: "Cheese Pav Bhaji", description: "Pav bhaji topped with cheese", price: "AED 15", image: samosa },
+    { name: "Vada Pav", description: "Potato fritter in pav bread", price: "AED 6", image: vadaPav },
+    { name: "Pav Bhaji", description: "Mixed vegetable curry with pav", price: "AED 12", image: pavBhaji },
+    { name: "Cheese Pav Bhaji", description: "Pav bhaji topped with cheese", price: "AED 15", image: pavBhaji },
     { name: "Punjabi Samosa", description: "Classic North Indian samosa", price: "AED 3", image: samosa },
     { name: "Bread Pakoda 2pcs", description: "Bread fritters", price: "AED 6", image: samosa },
     { name: "Daal Kachori", description: "Lentil stuffed kachori", price: "AED 2", image: samosa }
