@@ -24,6 +24,16 @@ import alooParatha from "@/assets/aloo-paratha.jpg";
 import choleBhatureReal from "@/assets/chole-bhature-real.jpg";
 import pooriAloo from "@/assets/poori-aloo.jpg";
 import deluxeThali from "@/assets/deluxe-thali.jpg";
+import dalTadka from "@/assets/dal-tadka.jpg";
+import dalMakhaniReal from "@/assets/dal-makhani-real.jpg";
+import gobhiAdraki from "@/assets/gobhi-adraki.jpg";
+import jeeraAloo from "@/assets/jeera-aloo.jpg";
+import kadhaiVeg from "@/assets/kadhai-veg.jpg";
+import kadhiChawal from "@/assets/kadhi-chawal.jpg";
+import alooPalakReal from "@/assets/aloo-palak-real.jpg";
+import bhindiMasala from "@/assets/bhindi-masala.jpg";
+import bhindiDoPyaza from "@/assets/bhindi-do-pyaza.jpg";
+import chanaMasala from "@/assets/chana-masala.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -72,20 +82,20 @@ const Menu = () => {
     { name: "Shahi Paneer", description: "Royal cottage cheese in rich creamy gravy", price: "AED 22", image: paneerTikka },
     { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22", image: paneerTikka },
     { name: "Makai Paneer", description: "Cottage cheese with sweet corn", price: "AED 22", image: paneerTikka },
-    { name: "Chana Masala", description: "Spicy chickpea curry", price: "AED 15", image: choleBhature }
+    { name: "Chana Masala", description: "Spicy chickpea curry", price: "AED 15", image: chanaMasala }
   ];
 
   const daalDishes = [
     { name: "Daal Palak", description: "Lentils cooked with spinach", price: "AED 19", image: dalMakhani },
     { name: "Daal Panchratan", description: "Five types of lentils cooked together", price: "AED 20", image: dalMakhani },
-    { name: "Daal Tadka", description: "Yellow lentils tempered with spices", price: "AED 18", image: dalMakhani },
-    { name: "Daal Makhani", description: "Black lentils in rich buttery gravy", price: "AED 20", image: dalMakhani },
+    { name: "Daal Tadka", description: "Yellow lentils tempered with spices", price: "AED 18", image: dalTadka },
+    { name: "Daal Makhani", description: "Black lentils in rich buttery gravy", price: "AED 20", image: dalMakhaniReal },
     { name: "Langar Wali Daal", description: "Traditional Gurudwara style lentils", price: "AED 22", image: dalMakhani }
   ];
 
   const vegetableDishes = [
     { name: "Makai Palak", description: "Sweet corn with spinach", price: "AED 22", image: palakPaneer },
-    { name: "Kadhai Veg", description: "Mixed vegetables in kadai masala", price: "AED 24", image: kadaiPaneer },
+    { name: "Kadhai Veg", description: "Mixed vegetables in kadai masala", price: "AED 24", image: kadhaiVeg },
     { name: "Gatte ki Sabji", description: "Gram flour dumplings in spicy curry", price: "AED 22", image: dalMakhani },
     { name: "Matar ka Nimona", description: "Green peas curry", price: "AED 22", image: dalMakhani },
     { name: "Shaam Savera", description: "Spinach kofta stuffed with cottage cheese", price: "AED 24", image: palakPaneer },
@@ -97,11 +107,11 @@ const Menu = () => {
     { name: "Veg Maratha", description: "Mixed vegetables Marathi style", price: "AED 28", image: vegBiryani },
     { name: "Kanha's Special Tawa veg", description: "Arabi, baingan, lotus stem, potato etc", price: "AED 28", image: vegBiryani },
     { name: "Punjabi Rajma Masala", description: "Kidney beans in rich Punjabi gravy", price: "AED 15", image: rajmaChawal },
-    { name: "Gobhi Adraki", description: "Cauliflower with ginger", price: "AED 15", image: vegBiryani },
-    { name: "Jeera Aloo", description: "Potatoes tempered with cumin seeds", price: "AED 15", image: alooPalak },
-    { name: "Aloo Palak", description: "Potatoes cooked with spinach", price: "AED 15", image: alooPalak },
-    { name: "Bhindi Masala", description: "Okra cooked with spices", price: "AED 15", image: vegBiryani },
-    { name: "Bhindi Do Pyaja", description: "Okra with double onions", price: "AED 17", image: vegBiryani },
+    { name: "Gobhi Adraki", description: "Cauliflower with ginger", price: "AED 15", image: gobhiAdraki },
+    { name: "Jeera Aloo", description: "Potatoes tempered with cumin seeds", price: "AED 15", image: jeeraAloo },
+    { name: "Aloo Palak", description: "Potatoes cooked with spinach", price: "AED 15", image: alooPalakReal },
+    { name: "Bhindi Masala", description: "Okra cooked with spices", price: "AED 15", image: bhindiMasala },
+    { name: "Bhindi Do Pyaja", description: "Okra with double onions", price: "AED 17", image: bhindiDoPyaza },
     { name: "Palak Mushroom", description: "Mushrooms in spinach gravy", price: "AED 22", image: palakPaneer },
     { name: "Kadhai Mushroom", description: "Mushrooms in kadai masala", price: "AED 25", image: kadaiMushroom },
     { name: "Mushroom Do Pyaja", description: "Mushrooms with double onions", price: "AED 25", image: kadaiMushroom }
@@ -132,7 +142,7 @@ const Menu = () => {
   const combos = [
     { name: "4 pcs Mini Daal Bati Churma", description: "Traditional Rajasthani combo", price: "AED 19", image: daalBatiChurma },
     { name: "Chhole Chawal", description: "Chickpea curry with rice", price: "AED 15", image: choleChawal },
-    { name: "Kadhi Chawal", description: "Yogurt curry with rice", price: "AED 15", image: vegBiryani },
+    { name: "Kadhi Chawal", description: "Yogurt curry with rice", price: "AED 15", image: kadhiChawal },
     { name: "Rajma Chawal", description: "Kidney beans curry with rice", price: "AED 15", image: rajmaChawalReal },
     { name: "Deluxe Indian Thali", description: "1 snacks of the day, masala chhach, Daal of the day, paneer sabji, 1 Lachha Paratha or Rice, 2 Chapati, pickle, green Salad, 1 sweet", price: "AED 22", image: deluxeThali }
   ];
