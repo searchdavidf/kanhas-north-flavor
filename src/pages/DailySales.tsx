@@ -112,11 +112,11 @@ const formSchema = z.object({
   noonSales: z
     .string()
 .optional()
-  .refine(
-    (val) =>
-      val === undefined || val === "" || (!isNaN(Number(val)) && Number(val) >= 0),, {
-      message: "Must be a valid positive number",
-    }),
+.refine(
+  (val) =>
+    val === undefined || val === "" || (!isNaN(Number(val)) && Number(val) >= 0), {
+    message: "Must be a valid positive number",
+  }),
   talabatSales: z
     .string()
   .optional()
