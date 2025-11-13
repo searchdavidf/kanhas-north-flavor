@@ -27,11 +27,11 @@ const ChatBot = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const WEBHOOK_URL = "https://searchdavidf.app.n8n.cloud/webhook/3a0c35fe-b746-4e1d-b793-de5648c11c80";
+  const WEBHOOK_URL = "https://searchdavidf.app.n8n.cloud/webhook-test/3a0c35fe-b746-4e1d-b793-de5648c11c80";
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!inputMessage.trim()) return;
 
     const userMessage: Message = {
@@ -60,30 +60,30 @@ const ChatBot = () => {
 
       if (response.ok) {
         const data = await response.json();
-        
+
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),
           text: data.response || "Thank you for your message! We'll get back to you shortly.",
           sender: "bot",
           timestamp: new Date(),
         };
-        
+
         setMessages((prev) => [...prev, botMessage]);
       } else {
         throw new Error("Failed to send message");
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      
+
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: "Sorry, there was an error sending your message. Please try again or call us directly at 02 309 4707.",
         sender: "bot",
         timestamp: new Date(),
       };
-      
+
       setMessages((prev) => [...prev, errorMessage]);
-      
+
       toast({
         title: "Connection Error",
         description: "Unable to send message. Please try again.",
@@ -112,24 +112,18 @@ const ChatBot = () => {
         <Card className="fixed bottom-6 right-6 w-96 h-[500px] shadow-2xl z-50 flex flex-col">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4 border-b">
             <CardTitle className="text-lg">Chat with Us</CardTitle>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-            >
+            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
               <X className="h-4 w-4" />
             </Button>
           </CardHeader>
-          
+
           <CardContent className="flex-1 flex flex-col p-0">
             <ScrollArea className="flex-1 p-4">
               <div className="space-y-4">
                 {messages.map((message) => (
                   <div
                     key={message.id}
-                    className={`flex ${
-                      message.sender === "user" ? "justify-end" : "justify-start"
-                    }`}
+                    className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <div
                       className={`max-w-[80%] rounded-lg px-4 py-2 ${
