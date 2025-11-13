@@ -42,6 +42,8 @@ import shahiPaneer from "@/assets/shahi-paneer.jpg";
 import rajmaMasala from "@/assets/rajma-masala.jpg";
 import gobiManchurian from "@/assets/gobi-manchurian.jpg";
 import lachhaParathaReal from "@/assets/lachha-paratha-real.jpg";
+import matarPulao from "@/assets/matar-pulao.jpg";
+import jeeraRice from "@/assets/jeera-rice.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -139,8 +141,8 @@ const Menu = () => {
 
   const rice = [
     { name: "White Rice", description: "Steamed basmati rice", price: "AED 10", image: vegBiryani },
-    { name: "Jeera Pulao", description: "Fragrant cumin flavored rice", price: "AED 12", image: vegBiryani },
-    { name: "Matar Pulao", description: "Rice with green peas", price: "AED 15", image: vegBiryani },
+    { name: "Jeera Pulao", description: "Fragrant cumin flavored rice", price: "AED 12", image: jeeraRice },
+    { name: "Matar Pulao", description: "Rice with green peas", price: "AED 15", image: matarPulao },
     { name: "Vegetable Biryani", description: "Fragrant rice with mixed vegetables", price: "AED 22", image: vegBiryani },
     { name: "Quinoa Biryani", description: "Healthy quinoa biryani", price: "AED 25", image: vegBiryani },
     { name: "Hyderabadi Biryani", description: "Authentic Hyderabadi style vegetable biryani", price: "AED 25", image: vegBiryani },
