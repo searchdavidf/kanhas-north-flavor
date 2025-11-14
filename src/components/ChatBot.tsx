@@ -1,10 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { MessageCircle, Send, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useToast } from "@/components/ui/use-toast";
 
 interface Message {
   id: string;
@@ -25,7 +20,6 @@ const ChatBot = () => {
   ]);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -51,53 +45,87 @@ const ChatBot = () => {
     };
 
     setMessages((prev) => [...prev, userMessage]);
+    const currentMessage = inputMessage;
     setInputMessage("");
     setIsLoading(true);
 
     try {
+      // Add timeout to the fetch request
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
       const response = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
-          message: inputMessage,
+          message: currentMessage,
           timestamp: new Date().toISOString(),
           sender: "website_visitor",
         }),
+        signal: controller.signal,
       });
 
-      if (response.ok) {
-        const data = await response.json();
+      clearTimeout(timeoutId);
 
-        const botMessage: Message = {
-          id: (Date.now() + 1).toString(),
-          text: data.response || "Thank you for your message! We'll get back to you shortly.",
-          sender: "bot",
-          timestamp: new Date(),
-        };
+      console.log("Response status:", response.status);
+      console.log("Response headers:", Object.fromEntries(response.headers.entries()));
 
-        setMessages((prev) => [...prev, botMessage]);
-      } else {
-        throw new Error("Failed to send message");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        console.warn("Response is not JSON:", contentType);
+        const text = await response.text();
+        console.log("Response text:", text);
+        throw new Error("Invalid response format");
+      }
+
+      const data = await response.json();
+      console.log("Response data:", data);
+
+      // Handle multiple possible response formats
+      let botResponseText =
+        data.response ||
+        data.message ||
+        data.reply ||
+        data.text ||
+        "Thank you for your message! We'll get back to you shortly.";
+
+      const botMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: botResponseText,
+        sender: "bot",
+        timestamp: new Date(),
+      };
+
+      setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error("Error sending message:", error);
 
+      let errorText =
+        "Sorry, there was an error sending your message. Please try again or call us directly at 02 309 4707.";
+
+      if (error instanceof Error) {
+        if (error.name === "AbortError") {
+          errorText = "Request timed out. Our AI is taking longer than expected. Please try again.";
+        } else if (error.message.includes("Failed to fetch")) {
+          errorText = "Unable to connect to chat service. Please check your internet connection or try again later.";
+        }
+      }
+
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "Sorry, there was an error sending your message. Please try again or call us directly at 02 309 4707.",
+        text: errorText,
         sender: "bot",
         timestamp: new Date(),
       };
 
       setMessages((prev) => [...prev, errorMessage]);
-
-      toast({
-        title: "Connection Error",
-        description: "Unable to send message. Please try again.",
-        variant: "destructive",
-      });
     } finally {
       setIsLoading(false);
     }
@@ -107,27 +135,29 @@ const ChatBot = () => {
     <>
       {/* Floating Chat Button */}
       {!isOpen && (
-        <Button
+        <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50"
-          size="icon"
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50 bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center"
         >
           <MessageCircle className="h-6 w-6" />
-        </Button>
+        </button>
       )}
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-6 w-96 h-[500px] shadow-2xl z-50 flex flex-col">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4 border-b">
-            <CardTitle className="text-lg">Chat with Us</CardTitle>
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+        <div className="fixed bottom-6 right-6 w-96 h-[500px] shadow-2xl z-50 flex flex-col bg-white rounded-lg border">
+          <div className="flex flex-row items-center justify-between p-4 pb-4 border-b">
+            <h3 className="text-lg font-semibold">Chat with Us</h3>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="h-8 w-8 rounded hover:bg-gray-100 flex items-center justify-center"
+            >
               <X className="h-4 w-4" />
-            </Button>
-          </CardHeader>
+            </button>
+          </div>
 
-          <CardContent className="flex-1 flex flex-col p-0 overflow-hidden">
-            <ScrollArea className="flex-1 h-full">
+          <div className="flex-1 flex flex-col p-0 overflow-hidden">
+            <div className="flex-1 h-full overflow-y-auto">
               <div className="space-y-4 p-4">
                 {messages.map((message) => (
                   <div
@@ -136,9 +166,7 @@ const ChatBot = () => {
                   >
                     <div
                       className={`max-w-[80%] rounded-lg px-4 py-2 ${
-                        message.sender === "user"
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-secondary text-secondary-foreground"
+                        message.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-900"
                       }`}
                     >
                       <p className="text-sm">{message.text}</p>
@@ -153,31 +181,42 @@ const ChatBot = () => {
                 ))}
                 {isLoading && (
                   <div className="flex justify-start">
-                    <div className="bg-secondary text-secondary-foreground rounded-lg px-4 py-2">
+                    <div className="bg-gray-100 text-gray-900 rounded-lg px-4 py-2">
                       <p className="text-sm">Typing...</p>
                     </div>
                   </div>
                 )}
                 <div ref={messagesEndRef} />
               </div>
-            </ScrollArea>
+            </div>
 
-            <form onSubmit={sendMessage} className="p-4 border-t">
+            <div className="p-4 border-t">
               <div className="flex gap-2">
-                <Input
+                <input
+                  type="text"
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      sendMessage(e);
+                    }
+                  }}
                   placeholder="Type your message..."
                   disabled={isLoading}
-                  className="flex-1"
+                  className="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <Button type="submit" size="icon" disabled={isLoading}>
+                <button
+                  onClick={sendMessage}
+                  disabled={isLoading}
+                  className="h-10 w-10 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                >
                   <Send className="h-4 w-4" />
-                </Button>
+                </button>
               </div>
-            </form>
-          </CardContent>
-        </Card>
+            </div>
+          </div>
+        </div>
       )}
     </>
   );
