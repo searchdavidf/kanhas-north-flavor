@@ -85,16 +85,28 @@ const ChatBot = () => {
         throw new Error("Invalid response format");
       }
 
-      const data = await response.json();
-      console.log("Response data:", data);
+      let data;
+      try {
+        const rawText = await response.text();
+        console.log("Raw response:", rawText);
+        data = JSON.parse(rawText);
+      } catch (parseError) {
+        console.error("JSON parse error:", parseError);
+        throw new Error("Invalid response format from webhook");
+      }
 
-      // Handle multiple possible response formats
+      console.log("Parsed data:", data);
+
+      // Handle multiple possible response formats and clean the response
       let botResponseText =
         data.response ||
         data.message ||
         data.reply ||
         data.text ||
         "Thank you for your message! We'll get back to you shortly.";
+
+      // Remove leading = or other control characters that might break the response
+      botResponseText = botResponseText.replace(/^[=\x00-\x1F]+/, '').trim();
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
