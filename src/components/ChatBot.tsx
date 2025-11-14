@@ -77,33 +77,53 @@ const ChatBot = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const contentType = response.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        console.warn("Response is not JSON:", contentType);
-        const text = await response.text();
-        console.log("Response text:", text);
-        throw new Error("Invalid response format");
+      const contentType = response.headers.get("content-type") || "";
+
+      // Always read as raw text first (some webhooks return malformed JSON)
+      const rawText = await response.text();
+      console.log("Raw response:", rawText);
+
+      let data: any = null;
+      if (contentType.includes("application/json")) {
+        try {
+          data = JSON.parse(rawText);
+        } catch (parseError) {
+          console.error("JSON parse error:", parseError);
+          // We'll try a tolerant extraction below instead of failing hard
+        }
       }
 
-      let data;
-      try {
-        const rawText = await response.text();
-        console.log("Raw response:", rawText);
-        data = JSON.parse(rawText);
-      } catch (parseError) {
-        console.error("JSON parse error:", parseError);
-        throw new Error("Invalid response format from webhook");
+      // Prefer structured fields if JSON parsed successfully
+      let botResponseText = "";
+      if (data && typeof data === "object") {
+        botResponseText =
+          data.response ||
+          data.message ||
+          data.reply ||
+          data.text ||
+          "Thank you for your message! We'll get back to you shortly.";
+      } else {
+        // Tolerant extraction from raw text for non-strict/invalid JSON bodies
+        const getValueFromRaw = (key: string) => {
+          try {
+            // DotAll flag 's' lets '.' match newlines. Captures the shortest string value.
+            const re = new RegExp(`"${key}"\\s*:\\s*"([\
+\\s\S]*?)"`, "s");
+            const m = rawText.match(re);
+            return m?.[1] || null;
+          } catch {
+            return null;
+          }
+        };
+
+        botResponseText =
+          getValueFromRaw("response") ||
+          getValueFromRaw("message") ||
+          getValueFromRaw("reply") ||
+          getValueFromRaw("text") ||
+          // If nothing matched, fall back to raw text (trimmed)
+          rawText.trim();
       }
-
-      console.log("Parsed data:", data);
-
-      // Handle multiple possible response formats and clean the response
-      let botResponseText =
-        data.response ||
-        data.message ||
-        data.reply ||
-        data.text ||
-        "Thank you for your message! We'll get back to you shortly.";
 
       // Remove leading = or other control characters that might break the response
       botResponseText = botResponseText.replace(/^[=\x00-\x1F]+/, '').trim();
