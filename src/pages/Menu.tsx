@@ -68,6 +68,9 @@ import vadaPav from "@/assets/vada-pav.jpg";
 import samosaChaatReal from "@/assets/samosa-chaat-real.jpg";
 import paniPuri from "@/assets/pani-puri.jpg";
 import sevPuri from "@/assets/sev-puri.jpg";
+import kachoriChaat from "@/assets/kachori-chaat.jpg";
+import samosaChaat from "@/assets/samosa-chaat.jpg";
+import ragdaPatties from "@/assets/ragda-patties.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -239,7 +242,7 @@ const Menu = () => {
       price: "AED 22",
       image: shahiPaneer,
     },
-    { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22" },
+    { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22", image: paneerTikka },
     { name: "Makai Paneer", description: "Cottage cheese with sweet corn", price: "AED 22", image: paneerTikka },
     { name: "Chana Masala", description: "Spicy chickpea curry", price: "AED 15", image: chanaMasala },
   ];
@@ -405,6 +408,24 @@ const Menu = () => {
       description: "Samosa topped with chickpea curry",
       price: "AED 10",
       image: samosaChaatReal,
+    },
+    {
+      name: "Kachori Chaat",
+      description: "Crispy kachori topped with yogurt, chutneys and spices",
+      price: "AED 14",
+      image: kachoriChaat,
+    },
+    {
+      name: "Samosa Chaat",
+      description: "Crushed samosa with chickpeas, yogurt and tangy chutneys",
+      price: "AED 14",
+      image: samosaChaat,
+    },
+    {
+      name: "Ragda Patties",
+      description: "Spiced potato patties served with white peas curry",
+      price: "AED 14",
+      image: ragdaPatties,
     },
     {
       name: "Raj Kachori",
