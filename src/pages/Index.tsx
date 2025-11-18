@@ -102,11 +102,22 @@ const Index = () => {
                   <MapPin className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Location</h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground mb-3">
                   Musaffah Shabiya 10
                   <br />
                   Near Madina Hyper Market
                 </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a 
+                    href="https://maps.app.goo.gl/ybSv85DPXxaeYZ2u7" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <MapPin className="h-4 w-4" />
+                    Get Directions
+                  </a>
+                </Button>
               </CardContent>
             </Card>
 
