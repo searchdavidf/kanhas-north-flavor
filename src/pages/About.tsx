@@ -1,5 +1,6 @@
 import { MapPin, Phone, Heart, Users, Award } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import heroImage from "@/assets/hero-restaurant.jpg";
 
@@ -109,13 +110,24 @@ const About = () => {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Our Location</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed mb-3">
                       Musaffah Shabiya 10<br />
                       Near Madina Hyper Market<br />
                       Abu Dhabi, UAE
                     </p>
+                    <Button variant="outline" size="sm" asChild>
+                      <a 
+                        href="https://maps.app.goo.gl/ybSv85DPXxaeYZ2u7" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2"
+                      >
+                        <MapPin className="h-4 w-4" />
+                        Get Directions
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </CardContent>
