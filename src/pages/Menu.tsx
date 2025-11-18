@@ -87,19 +87,13 @@ const Menu = () => {
       image: vadaSambarReal,
     },
     { name: "Sada Dosa", description: "Thin and crispy rice crepe", price: "AED 9", image: sadaDosaReal },
-    { name: "Mysore Sada Dosa", description: "Dosa with spicy red chutney", price: "AED 14", image: sadaDosaReal },
+    
     { name: "Onion Rawa Sada dosa", description: "Semolina dosa with onions", price: "AED 12", image: sadaDosaReal },
     { name: "Paper Sada Dosa", description: "Extra thin and crispy dosa", price: "AED 10", image: sadaDosaReal },
     {
       name: "Masala Dosa",
       description: "Crispy dosa filled with spiced potato masala",
       price: "AED 9",
-      image: masalaDosaReal,
-    },
-    {
-      name: "Onion Rawa Masala Dosa",
-      description: "Semolina dosa with onion and potato filling",
-      price: "AED 16",
       image: masalaDosaReal,
     },
     {
@@ -127,25 +121,13 @@ const Menu = () => {
       image: uttapamReal,
     },
     {
-      name: "South ka tiffin",
-      description: "Mini dosa, idli, vada, upma, kesari, chutney, sambhal",
-      price: "AED 19",
-      image: idliSambarReal,
-    },
-    {
       name: "Multigrain Dosa",
       description: "Healthy dosa made with multiple grains",
       price: "AED 19",
       image: masalaDosaReal,
     },
-    { name: "Ragi Dosa", description: "Nutritious finger millet dosa", price: "AED 19", image: masalaDosaReal },
-    { name: "Table family Dosa", description: "Large family-sized dosa", price: "AED 22", image: masalaDosaReal },
-    {
-      name: "Appam & Curry",
-      description: "Soft rice pancake served with vegetable curry",
-      price: "AED 10",
-      image: idliSambarReal,
-    },
+    
+    
   ];
 
   const northKaNashta = [
@@ -183,12 +165,6 @@ const Menu = () => {
       price: "AED 15",
       image: lachhaParatha,
     },
-    {
-      name: "Jaipuri Paratha",
-      description: "Special Jaipuri style stuffed paratha",
-      price: "AED 15",
-      image: lachhaParatha,
-    },
   ];
 
   const paneerDishes = [
@@ -205,12 +181,6 @@ const Menu = () => {
       image: paneerTikka,
     },
     { name: "Paneer Bhurji", description: "Scrambled cottage cheese with spices", price: "AED 19", image: paneerTikka },
-    {
-      name: "Paneer tikka masala",
-      description: "Grilled cottage cheese in spicy tomato gravy",
-      price: "AED 24",
-      image: paneerTikka,
-    },
     {
       name: "Butter Paneers",
       description: "Cottage cheese in rich butter tomato gravy",
@@ -243,7 +213,7 @@ const Menu = () => {
       image: shahiPaneer,
     },
     { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22", image: paneerTikka },
-    { name: "Makai Paneer", description: "Cottage cheese with sweet corn", price: "AED 22", image: paneerTikka },
+    
     { name: "Chana Masala", description: "Spicy chickpea curry", price: "AED 15", image: chanaMasala },
   ];
 
@@ -273,15 +243,9 @@ const Menu = () => {
   const vegetableDishes = [
     { name: "Makai Palak", description: "Sweet corn with spinach", price: "AED 22", image: palakPaneer },
     { name: "Kadhai Veg", description: "Mixed vegetables in kadai masala", price: "AED 24", image: kadhaiVeg },
-    { name: "Gatte ki Sabji", description: "Gram flour dumplings in spicy curry", price: "AED 22", image: dalMakhani },
-    { name: "Matar ka Nimona", description: "Green peas curry", price: "AED 22", image: dalMakhani },
-    {
-      name: "Shaam Savera",
-      description: "Spinach kofta stuffed with cottage cheese",
-      price: "AED 24",
-      image: palakPaneer,
-    },
-    { name: "Bharwa shimla mirch", description: "Stuffed bell peppers", price: "AED 24", image: vegBiryani },
+    
+    
+    
     { name: "Baingan Bharta", description: "Roasted eggplant mash with spices", price: "AED 22", image: dalMakhani },
     { name: "Soya Chaap Masala", description: "Soya chaap in spicy masala gravy", price: "AED 25", image: paneerTikka },
     { name: "Kadhi Pakoda", description: "Gram flour dumplings in yogurt curry", price: "AED 20", image: dalMakhani },
@@ -291,13 +255,7 @@ const Menu = () => {
       price: "AED 22",
       image: alooPalak,
     },
-    { name: "Veg Maratha", description: "Mixed vegetables Marathi style", price: "AED 28", image: vegBiryani },
-    {
-      name: "Kanha's Special Tawa veg",
-      description: "Arabi, baingan, lotus stem, potato etc",
-      price: "AED 28",
-      image: vegBiryani,
-    },
+    
     {
       name: "Punjabi Rajma Masala",
       description: "Kidney beans in rich Punjabi gravy",
@@ -321,18 +279,12 @@ const Menu = () => {
     { name: "Missi Roti", description: "Gram flour flatbread", price: "AED 5", image: tawaRoti },
     { name: "Makke ki Roti", description: "Corn flour flatbread", price: "AED 5", image: tawaRoti },
     { name: "Lachha Paratha", description: "Multi-layered flaky bread", price: "AED 4", image: lachhaParathaReal },
-    { name: "Grilled Chapati", description: "Charcoal grilled chapati (5pm onwards)", price: "AED 4", image: tawaRoti },
+    
     {
       name: "Cheese or Chocolate Paratha",
       description: "Sweet stuffed paratha",
       price: "AED 15",
       image: lachhaParatha,
-    },
-    {
-      name: "Bread Basket",
-      description: "2 Tawa roti, 2 Ajwaini roti, 2 lachha Paratha",
-      price: "AED 20",
-      image: tawaRoti,
     },
   ];
 
@@ -348,8 +300,8 @@ const Menu = () => {
     },
     { name: "Desi Chowmein", description: "Indian style chowmein", price: "AED 22", image: vegChowmein },
     { name: "Fried Rice", description: "Vegetable fried rice", price: "AED 19", image: vegFriedRice },
-    { name: "Golden fry baby corn", description: "Crispy fried baby corn", price: "AED 20", image: "" },
-    { name: "Crispy corn", description: "Crispy corn kernels with spices", price: "AED 22", image: "" },
+    
+    
     { name: "Gobhi-65", description: "Spicy fried cauliflower", price: "AED 19", image: gobiManchurian },
     { name: "Crispy Veg", description: "Assorted crispy vegetables", price: "AED 19", image: "" },
     {
@@ -395,7 +347,7 @@ const Menu = () => {
       price: "AED 25",
       image: kadaiPaneer,
     },
-    { name: "Himalyan Momos 8pcs", description: "Steamed vegetable dumplings", price: "AED 19", image: springRolls },
+    
   ];
 
   const chaatSnacks = [
@@ -506,12 +458,6 @@ const Menu = () => {
       name: "Gulab Jamun",
       description: "Golden brown milk solid dumplings soaked in sweet rose-flavored syrup",
       price: "AED 12",
-      image: gulabJamun,
-    },
-    {
-      name: "Rasmalai",
-      description: "Soft cottage cheese patties in sweetened, flavored milk with pistachios and saffron",
-      price: "AED 15",
       image: gulabJamun,
     },
     {
