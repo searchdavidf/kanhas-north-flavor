@@ -239,7 +239,7 @@ const Menu = () => {
       price: "AED 22",
       image: shahiPaneer,
     },
-    { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22", image: paneerTikka },
+    { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22" },
     { name: "Makai Paneer", description: "Cottage cheese with sweet corn", price: "AED 22", image: paneerTikka },
     { name: "Chana Masala", description: "Spicy chickpea curry", price: "AED 15", image: chanaMasala },
   ];
