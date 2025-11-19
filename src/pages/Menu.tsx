@@ -80,6 +80,10 @@ import crispyVeg from "@/assets/crispy-veg.jpg";
 import indoriPoha from "@/assets/indori-poha.jpg";
 import maggiMasala from "@/assets/maggi-masala.jpg";
 import onionRavaDosa from "@/assets/onion-rava-dosa.jpg";
+import kachoriChaatNew from "@/assets/kachori-chaat-new.jpg";
+import mangoLassi from "@/assets/mango-lassi.jpg";
+import rajKachori from "@/assets/raj-kachori.jpg";
+import vegManchurian from "@/assets/veg-manchurian.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -270,7 +274,6 @@ const Menu = () => {
       price: "AED 15",
       image: rajmaMasala,
     },
-    { name: "Gobhi Adraki", description: "Cauliflower with ginger", price: "AED 15", image: gobhiAdraki },
     { name: "Jeera Aloo", description: "Potatoes tempered with cumin seeds", price: "AED 15", image: jeeraAloo },
     { name: "Aloo Palak", description: "Potatoes cooked with spinach", price: "AED 15", image: alooPalakReal },
     { name: "Bhindi Masala", description: "Okra cooked with spices", price: "AED 15", image: bhindiMasala },
@@ -322,7 +325,7 @@ const Menu = () => {
       name: "Vegetable Manchuriyan (Dry/Semi gravy)",
       description: "Mixed vegetable balls in Manchurian sauce",
       price: "AED 19",
-      image: "",
+      image: vegManchurian,
     },
     {
       name: "Honey chilly potato",
@@ -373,7 +376,7 @@ const Menu = () => {
       name: "Kachori Chaat",
       description: "Crispy kachori topped with yogurt, chutneys and spices",
       price: "AED 14",
-      image: kachoriChaat,
+      image: kachoriChaatNew,
     },
     {
       name: "Samosa Chaat",
@@ -391,7 +394,7 @@ const Menu = () => {
       name: "Raj Kachori",
       description: "Large kachori filled with potatoes and chutneys",
       price: "AED 14",
-      image: samosa,
+      image: rajKachori,
     },
     { name: "Dahi Bhalla", description: "Lentil dumplings in yogurt", price: "AED 10", image: dahiPuri },
     { name: "Papdi Chaat", description: "Crispy papdi with potatoes and chutneys", price: "AED 12", image: papdiChaat },
@@ -476,7 +479,7 @@ const Menu = () => {
       name: "Mango Lassi",
       description: "Refreshing yogurt-based drink blended with sweet mangoes",
       price: "AED 10",
-      image: gulabJamun,
+      image: mangoLassi,
     },
     {
       name: "Masala Chai",
