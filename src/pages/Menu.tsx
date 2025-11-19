@@ -212,7 +212,6 @@ const Menu = () => {
       price: "AED 22",
       image: shahiPaneer,
     },
-    { name: "Methi Paneer", description: "Cottage cheese with fenugreek leaves", price: "AED 22", image: paneerTikka },
     
     { name: "Chana Masala", description: "Spicy chickpea curry", price: "AED 15", image: chanaMasala },
   ];
@@ -388,12 +387,8 @@ const Menu = () => {
     { name: "Dahi Bhalla", description: "Lentil dumplings in yogurt", price: "AED 10", image: dahiPuri },
     { name: "Papdi Chaat", description: "Crispy papdi with potatoes and chutneys", price: "AED 12", image: papdiChaat },
     { name: "Bhalla Papdi", description: "Combination of bhalla and papdi", price: "AED 12", image: papdiChaat },
-    { name: "Ragda Patties", description: "Potato patties with pea curry", price: "AED 12", image: samosa },
-    { name: "Samosa Chaat", description: "Samosa topped with chickpeas and chutneys", price: "AED 12", image: samosa },
-    { name: "Kachori Chaat", description: "Kachori topped with chutneys", price: "AED 12", image: samosa },
     { name: "Chana Chaat", description: "Chickpea salad with spices", price: "AED 10", image: chanaChaat },
     { name: "Chinese Bhel", description: "Indo-Chinese fusion snack", price: "AED 15", image: chineseBhel },
-    { name: "Mix Chaat", description: "Mixed chaat varieties", price: "AED 15", image: samosa },
     { name: "Kanha's Special Chaat", description: "House special chaat", price: "AED 19", image: papdiChaat },
     { name: "Dabeli", description: "Spiced potato filling in bun", price: "AED 8", image: dabeli },
     { name: "Samosa Pav", description: "Samosa served in pav bread", price: "AED 6", image: samosa },
@@ -445,7 +440,6 @@ const Menu = () => {
   ];
 
   const saladsRaita = [
-    { name: "Salsa Salad", description: "Fresh Mexican style salsa", price: "AED 9", image: samosa },
     { name: "Green Salad", description: "Fresh seasonal green salad", price: "AED 7", image: samosa },
     { name: "Beetroot Raita", description: "Yogurt with beetroot", price: "AED 9", image: samosa },
     { name: "Vegetable Raita", description: "Mixed vegetable yogurt", price: "AED 9", image: samosa },
@@ -482,9 +476,21 @@ const Menu = () => {
       image: gulabJamun,
     },
     {
+      name: "Kulhad Tea",
+      description: "Traditional Indian tea served in authentic clay cup",
+      price: "AED 6",
+      image: gulabJamun,
+    },
+    {
       name: "Fresh Lime Soda",
       description: "Zesty lime juice with soda water, sweet or salted",
       price: "AED 8",
+      image: gulabJamun,
+    },
+    {
+      name: "Soft Drink",
+      description: "Chilled carbonated beverages",
+      price: "AED 5",
       image: gulabJamun,
     },
   ];
