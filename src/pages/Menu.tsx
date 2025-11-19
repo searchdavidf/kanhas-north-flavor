@@ -71,6 +71,15 @@ import sevPuri from "@/assets/sev-puri.jpg";
 import kachoriChaat from "@/assets/kachori-chaat.jpg";
 import samosaChaat from "@/assets/samosa-chaat.jpg";
 import ragdaPatties from "@/assets/ragda-patties.jpg";
+import paneerPepperFry from "@/assets/paneer-pepper-fry.jpg";
+import paperSadaDosa from "@/assets/paper-sada-dosa.jpg";
+import sadaDosaNew from "@/assets/sada-dosa-new.jpg";
+import sevaiKhichdi from "@/assets/sevai-khichdi.jpg";
+import vegGrillSandwich from "@/assets/veg-grill-sandwich.jpg";
+import crispyVeg from "@/assets/crispy-veg.jpg";
+import indoriPoha from "@/assets/indori-poha.jpg";
+import maggiMasala from "@/assets/maggi-masala.jpg";
+import onionRavaDosa from "@/assets/onion-rava-dosa.jpg";
 
 const Menu = () => {
   const southKaNashta = [
@@ -86,10 +95,10 @@ const Menu = () => {
       price: "AED 7",
       image: vadaSambarReal,
     },
-    { name: "Sada Dosa", description: "Thin and crispy rice crepe", price: "AED 9", image: sadaDosaReal },
+    { name: "Sada Dosa", description: "Thin and crispy rice crepe", price: "AED 9", image: sadaDosaNew },
     
-    { name: "Onion Rawa Sada dosa", description: "Semolina dosa with onions", price: "AED 12", image: sadaDosaReal },
-    { name: "Paper Sada Dosa", description: "Extra thin and crispy dosa", price: "AED 10", image: sadaDosaReal },
+    { name: "Onion Rawa Sada dosa", description: "Semolina dosa with onions", price: "AED 12", image: onionRavaDosa },
+    { name: "Paper Sada Dosa", description: "Extra thin and crispy dosa", price: "AED 10", image: paperSadaDosa },
     {
       name: "Masala Dosa",
       description: "Crispy dosa filled with spiced potato masala",
@@ -148,11 +157,11 @@ const Menu = () => {
       name: "Veg Grill Sandwich",
       description: "Grilled sandwich with mixed vegetables",
       price: "AED 15",
-      image: samosa,
+      image: vegGrillSandwich,
     },
-    { name: "Indori Poha", description: "Flattened rice cooked Indori style", price: "AED 12", image: samosa },
-    { name: "Sevai Khichdi", description: "Vermicelli cooked with spices", price: "AED 12", image: samosa },
-    { name: "Maggie Masala", description: "Spicy Indian style instant noodles", price: "AED 10", image: samosa },
+    { name: "Indori Poha", description: "Flattened rice cooked Indori style", price: "AED 12", image: indoriPoha },
+    { name: "Sevai Khichdi", description: "Vermicelli cooked with spices", price: "AED 12", image: sevaiKhichdi },
+    { name: "Maggie Masala", description: "Spicy Indian style instant noodles", price: "AED 10", image: maggiMasala },
     {
       name: "Stuffed Parathas (Aloo/Mooli/Gobhi)",
       description: "Flatbread stuffed with potato/radish/cauliflower",
@@ -172,7 +181,7 @@ const Menu = () => {
       name: "Paneer Lababdar",
       description: "Cottage cheese in rich tomato cream gravy",
       price: "AED 22",
-      image: paneerTikka,
+      image: paneerPepperFry,
     },
     {
       name: "Paneer Pasanda",
@@ -302,7 +311,7 @@ const Menu = () => {
     
     
     { name: "Gobhi-65", description: "Spicy fried cauliflower", price: "AED 19", image: gobiManchurian },
-    { name: "Crispy Veg", description: "Assorted crispy vegetables", price: "AED 19", image: "" },
+    { name: "Crispy Veg", description: "Assorted crispy vegetables", price: "AED 19", image: crispyVeg },
     {
       name: "Gobhi Manchuriyan (Dry/Semi gravy)",
       description: "Cauliflower in Manchurian sauce",
