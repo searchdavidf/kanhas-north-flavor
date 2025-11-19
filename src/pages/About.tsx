@@ -117,16 +117,14 @@ const About = () => {
                       Near Madina Hyper Market<br />
                       Abu Dhabi, UAE
                     </p>
-                    <Button variant="outline" size="sm" asChild>
-                      <a 
-                        href="https://maps.app.goo.gl/ybSv85DPXxaeYZ2u7" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2"
-                      >
-                        <MapPin className="h-4 w-4" />
-                        Get Directions
-                      </a>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => window.open('https://maps.app.goo.gl/ybSv85DPXxaeYZ2u7', '_blank')}
+                      className="inline-flex items-center gap-2"
+                    >
+                      <MapPin className="h-4 w-4" />
+                      Get Directions
                     </Button>
                   </div>
                 </div>
