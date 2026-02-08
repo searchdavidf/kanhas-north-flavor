@@ -30,7 +30,7 @@ const ChatBot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const WEBHOOK_URL = "https://searchdavidf.app.n8n.cloud/webhook/3a0c35fe-b746-4e1d-b793-de5648c11c80";
+  const WEBHOOK_URL = "http://localhost:5678/webhook/3a0c35fe-b746-4e1d-b793-de5648c11c80";
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -108,7 +108,8 @@ const ChatBot = () => {
           try {
             // DotAll flag 's' lets '.' match newlines. Captures the shortest string value.
             const re = new RegExp(`"${key}"\\s*:\\s*"([\
-\\s\S]*?)"`, "s");
+\
+\s\S]*?)"`, "s");
             const m = rawText.match(re);
             return m?.[1] || null;
           } catch {
