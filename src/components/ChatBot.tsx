@@ -30,8 +30,7 @@ const ChatBot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const WEBHOOK_URL = "https:n8n.kanhasrestaurant.com/webhook/3a0c35fe-b746-4e1d-b793-de5648c11c80";
-
+  const WEBHOOK_URL = "https://n8n.kanhasrestaurant.com/webhook/3a0c35fe-b746-4e1d-b793-de5648c11c80";
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
 
